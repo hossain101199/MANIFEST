@@ -36,8 +36,8 @@ const Error = ({ error, reset }: ErrorProps) => {
             We encountered an unexpected error on your wellness journey.
           </p>
           <p className="text-sm text-muted-foreground mb-6">
-            Don't worry, these things happen. Let's try to get you back on
-            track.
+            Don&apos;t worry, these things happen. Let&apos;s try to get you
+            back on track.
           </p>
 
           {/* Error Message (Dev Mode Only) */}

@@ -21,12 +21,12 @@ const NotFound = () => {
         {/* Description */}
         <div className="bg-card border border-border rounded-2xl p-8 mb-8">
           <p className="text-lg text-muted-foreground mb-4">
-            Oops! The page you're looking for seems to have wandered off the
-            path to wellness.
+            Oops! The page you&apos;re looking for seems to have wandered off
+            the path to wellness.
           </p>
           <p className="text-sm text-muted-foreground">
-            Don't worry, even the best journeys have unexpected detours. Let's
-            get you back on track.
+            Don&apos;t worry, even the best journeys have unexpected detours.
+            Let&apos;s get you back on track.
           </p>
         </div>
 

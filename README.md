@@ -48,8 +48,8 @@ A modern wellness planner web application built with Next.js 15, React 19, TypeS
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/manifest.git
-cd manifest
+git clone https://github.com/hossain101199/MANIFEST
+cd MANIFEST
 ```
 
 2. **Install dependencies:**
