@@ -1,8 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 MANIFEST - Wellness Planner
 
-## Getting Started
+> Transform your life through daily mindfulness and intentional living.
 
-First, run the development server:
+A modern wellness planner web application built with Next.js 15, React 19, TypeScript, and Tailwind CSS v4. MANIFEST helps users embark on a journey of daily mindfulness, holistic health, goal attainment, stress relief, balance, and personal growth.
+
+![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19.1.0-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwind-css)
+
+---
+
+## ✨ Features
+
+- 🧘 **Daily Mindfulness** - Guided meditation and mindfulness exercises
+- 🎯 **Goal Tracking** - Set and track meaningful wellness goals
+- 📖 **Wellness Journal** - Digital journal for gratitude and reflection
+- 📊 **Progress Analytics** - Visualize your wellness journey
+- 💪 **Habit Building** - Build and track sustainable healthy habits
+- ✨ **Personalized Experience** - Customized recommendations based on your goals
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) with App Router & Turbopack
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) patterns
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Form Management:** [Formik](https://formik.org/)
+- **Validation:** [Yup](https://github.com/jquense/yup)
+- **Animations:** [tw-animate-css](https://www.npmjs.com/package/tw-animate-css)
+- **Font:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+
+---
+
+## 🛠️ Installation
+
+### Prerequisites
+
+- **Node.js** 20.x or higher
+- **npm** or **yarn** or **pnpm**
+
+### Steps
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/manifest.git
+cd manifest
+```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. **Run the development server:**
 
 ```bash
 npm run dev
@@ -10,27 +70,66 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open your browser:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev        # Start development server with Turbopack
+npm run build      # Build for production with Turbopack
+npm run start      # Start production server
+npm run lint       # Run ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Code Style
 
-## Deploy on Vercel
+- **TypeScript** for type safety
+- **ESLint** for code linting
+- **Prettier** for code formatting (recommended)
+- Component naming: PascalCase
+- File naming: kebab-case
+- Clean, readable, maintainable code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Author
+
+**Your Name**
+
+- GitHub: [@hossain101199](https://github.com/hossain101199)
+- Email: fshossain10@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [Formik](https://formik.org/)
+- [Vercel](https://vercel.com/) for hosting
+
+---
+
+## 🔗 Links
+
+- **Live Demo:** [https://manifest-app.vercel.app](https://manifest-app.vercel.app)
+
+---
+
+<div align="center">
+  
+### ⭐ Star this repo if you find it helpful!
+
+Made with ❤️ and ☕ by the MANIFEST team
+
+</div>
