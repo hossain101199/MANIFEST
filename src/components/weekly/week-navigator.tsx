@@ -4,40 +4,22 @@ import {
   formatWeekDisplay,
   getCurrentDateInfo,
   getNextWeek,
-  getPreviousWeek,
   isSameWeek,
   isWeekCurrent,
   isWeekFuture,
   isWeekPast,
 } from "@/lib/utils/week-utils";
-import { WeekInfo } from "@/types/weekly";
+import { useWeeklyStore } from "@/store/weekly-store";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import WeekPickerModal from "./week-picker-modal";
 
 const WeekNavigator = () => {
-  const [selectedWeekInfo, setSelectedWeekInfo] = useState<WeekInfo>(
-    getCurrentDateInfo()
-  );
-
-  const handlePreviousWeek = () => {
-    const prevWeek = getPreviousWeek(selectedWeekInfo);
-    setSelectedWeekInfo(prevWeek);
-  };
-
-  const handleNextWeek = () => {
-    const nextWeek = getNextWeek(selectedWeekInfo);
-    // Only allow navigation if next week is not in the future
-    if (!isWeekFuture(nextWeek)) {
-      setSelectedWeekInfo(nextWeek);
-    }
-  };
-
-  const handleGoToCurrentWeek = () => {
-    setSelectedWeekInfo(getCurrentDateInfo());
-  };
+  const selectedWeekInfo = useWeeklyStore((state) => state.selectedWeek);
+  const goToPreviousWeek = useWeeklyStore((state) => state.goToPreviousWeek);
+  const goToNextWeek = useWeeklyStore((state) => state.goToNextWeek);
+  const goToCurrentWeek = useWeeklyStore((state) => state.goToCurrentWeek);
 
   // Check if we can go to next week
   const nextWeek = getNextWeek(selectedWeekInfo);
@@ -56,7 +38,7 @@ const WeekNavigator = () => {
         variant="outline"
         size="lg"
         className="w-full sm:w-auto"
-        onClick={handlePreviousWeek}
+        onClick={goToPreviousWeek}
       >
         <ChevronLeft className="h-5 w-5 mr-2" />
         Previous
@@ -94,7 +76,7 @@ const WeekNavigator = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={handleGoToCurrentWeek}
+              onClick={goToCurrentWeek}
               className="text-xs"
             >
               Go to Current Week
@@ -108,7 +90,7 @@ const WeekNavigator = () => {
         variant="outline"
         size="lg"
         className="w-full sm:w-auto"
-        onClick={handleNextWeek}
+        onClick={goToNextWeek}
         disabled={!canGoNext}
       >
         Next

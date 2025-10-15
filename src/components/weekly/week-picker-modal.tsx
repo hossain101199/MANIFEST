@@ -8,9 +8,9 @@ import {
   isSameWeek,
   isWeekFuture,
 } from "@/lib/utils/week-utils";
+import { useWeeklyStore } from "@/store/weekly-store";
 import { WeekInfo } from "@/types/weekly";
 import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 import { Button } from "../ui/button";
 import {
   Dialog,
@@ -22,25 +22,21 @@ import {
 } from "../ui/dialog";
 
 const WeekPickerModal = () => {
-  const [viewYear, setViewYear] = useState(getCurrentDateInfo().year);
-  const [selectedWeek, setSelectedWeek] = useState(getCurrentDateInfo());
+  const viewYear = useWeeklyStore((state) => state.viewYear);
+  const incrementViewYear = useWeeklyStore((state) => state.incrementViewYear);
+  const decrementViewYear = useWeeklyStore((state) => state.decrementViewYear);
+
+  const selectedWeek = useWeeklyStore((state) => state.selectedWeek);
+  const setSelectedWeek = useWeeklyStore((state) => state.setSelectedWeek);
 
   const weeksToShow = getWeeksInYear(viewYear);
   const currentWeek = getCurrentDateInfo();
 
   const handleSelectWeek = (weekInfo: WeekInfo) => {
-    if (!isWeekFuture(weekInfo)) {
-      setSelectedWeek(weekInfo);
-    }
+    setSelectedWeek(weekInfo);
   };
 
-  const handlePreviousYear = () => {
-    setViewYear(viewYear - 1);
-  };
-
-  const handleNextYear = () => {
-    setViewYear(viewYear + 1);
-  };
+  const isMaxYear = viewYear === getCurrentDateInfo().year;
 
   return (
     <Dialog>
@@ -58,7 +54,7 @@ const WeekPickerModal = () => {
 
         {/* Year Navigation */}
         <div className="flex flex-col sm:flex-row items-center justify-between pb-6">
-          <Button variant="outline" size="sm" onClick={handlePreviousYear}>
+          <Button variant="outline" size="sm" onClick={decrementViewYear}>
             <ChevronLeft className="h-4 w-4 mr-2" />
             Previous
           </Button>
@@ -68,8 +64,8 @@ const WeekPickerModal = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={handleNextYear}
-            disabled={viewYear === getCurrentDateInfo().year}
+            onClick={incrementViewYear}
+            disabled={isMaxYear}
           >
             Next
             <ChevronRight className="h-4 w-4 ml-2" />
