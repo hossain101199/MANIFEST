@@ -68,20 +68,6 @@ const Error = ({ error, reset }: ErrorProps) => {
             </Button>
           </Link>
         </div>
-
-        {/* Support Message */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground">
-            If this problem persists, please{" "}
-            <Link
-              href={PUBLIC_ROUTES.CONTACT}
-              className="text-primary hover:underline"
-            >
-              contact our support team
-            </Link>
-            .
-          </p>
-        </div>
       </div>
     </div>
   );

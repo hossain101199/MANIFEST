@@ -49,34 +49,7 @@ const NotFound = () => {
           </Button>
         </div>
 
-        {/* Helpful Links */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground mb-4">
-            You might be looking for:
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-            <Link
-              href={PUBLIC_ROUTES.FEATURES}
-              className="text-primary hover:underline"
-            >
-              Features
-            </Link>
-            <span className="text-muted-foreground">•</span>
-            <Link
-              href={PUBLIC_ROUTES.HOW_IT_WORKS}
-              className="text-primary hover:underline"
-            >
-              How It Works
-            </Link>
-            <span className="text-muted-foreground">•</span>
-            <Link
-              href={PUBLIC_ROUTES.CONTACT}
-              className="text-primary hover:underline"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
+     
       </div>
     </div>
   );

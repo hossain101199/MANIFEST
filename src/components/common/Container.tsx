@@ -16,7 +16,10 @@ const Container = <T extends ElementType = "div">({
   const Component = as || "div";
 
   return (
-    <Component className={cn("container px-4 mx-auto", className)} {...props}>
+    <Component
+      className={cn("container px-4 max-w-3xl mx-auto", className)}
+      {...props}
+    >
       {children}
     </Component>
   );
