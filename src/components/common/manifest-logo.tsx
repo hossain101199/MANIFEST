@@ -1,4 +1,4 @@
-import { PUBLIC_ROUTES } from "@/lib/routes";
+import { PUBLIC_ROUTES } from "@/lib/constants/routes";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
 

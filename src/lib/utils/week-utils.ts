@@ -1,4 +1,4 @@
-import { WeekInfo } from "./../types/weekly";
+import { WeekInfo } from "../../types/weekly";
 
 /**
  * Get ISO week number for a given date

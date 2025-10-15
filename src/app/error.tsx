@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { PUBLIC_ROUTES } from "@/lib/routes";
+import { PUBLIC_ROUTES } from "@/lib/constants/routes";
 import { AlertTriangle, Home, RefreshCw, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";

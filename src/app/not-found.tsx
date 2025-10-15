@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { PUBLIC_ROUTES } from "@/lib/routes";
+import { PUBLIC_ROUTES } from "@/lib/constants/routes";
 import { ArrowLeft, Home, Sparkles } from "lucide-react";
 import Link from "next/link";
 
@@ -48,8 +48,6 @@ const NotFound = () => {
             Go Back
           </Button>
         </div>
-
-     
       </div>
     </div>
   );

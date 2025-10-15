@@ -1,6 +1,5 @@
 "use client";
 
-import { WeekInfo } from "@/lib/types/weekly";
 import {
   formatWeekDisplay,
   getCurrentDateInfo,
@@ -11,6 +10,7 @@ import {
   isWeekFuture,
   isWeekPast,
 } from "@/lib/utils/week-utils";
+import { WeekInfo } from "@/types/weekly";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";

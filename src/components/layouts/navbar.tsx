@@ -1,4 +1,4 @@
-import { AUTH_ROUTES } from "@/lib/routes";
+import { AUTH_ROUTES } from "@/lib/constants/routes";
 import Link from "next/link";
 import Container from "../common/Container";
 import ManifestLogo from "../common/manifest-logo";
