@@ -1,6 +1,6 @@
 import { AUTH_ROUTES } from "@/lib/constants/routes";
 import Link from "next/link";
-import Container from "../common/Container";
+import Container from "../common/container";
 import ManifestLogo from "../common/manifest-logo";
 import { Button } from "../ui/button";
 

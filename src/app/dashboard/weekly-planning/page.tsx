@@ -1,6 +1,7 @@
 "use client";
 
 import WeekNavigator from "@/components/weekly/week-navigator";
+import WeeklyFeeling from "@/components/weekly/weekly-feeling";
 import { formatWeekDisplay } from "@/lib/utils/week-utils";
 import { useWeeklyStore } from "@/store/weekly-store";
 
@@ -17,6 +18,8 @@ const WeeklyPlanningPage = () => {
       </div>
 
       <WeekNavigator />
+
+      <WeeklyFeeling />
     </div>
   );
 };

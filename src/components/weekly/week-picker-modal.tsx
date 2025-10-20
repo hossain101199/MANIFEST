@@ -23,6 +23,7 @@ import {
 
 const WeekPickerModal = () => {
   const viewYear = useWeeklyStore((state) => state.viewYear);
+  const setViewYear = useWeeklyStore((state) => state.setViewYear);
   const incrementViewYear = useWeeklyStore((state) => state.incrementViewYear);
   const decrementViewYear = useWeeklyStore((state) => state.decrementViewYear);
 
@@ -40,7 +41,7 @@ const WeekPickerModal = () => {
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild onClick={() => setViewYear(selectedWeek.year)}>
         <Calendar className="h-5 w-5 cursor-pointer" />
       </DialogTrigger>
 
@@ -54,8 +55,13 @@ const WeekPickerModal = () => {
 
         {/* Year Navigation */}
         <div className="flex flex-col sm:flex-row items-center justify-between pb-6">
-          <Button variant="outline" size="sm" onClick={decrementViewYear}>
-            <ChevronLeft className="h-4 w-4 mr-2" />
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex items-center space-x-2"
+            onClick={decrementViewYear}
+          >
+            <ChevronLeft className="h-4 w-4" />
             Previous
           </Button>
 
@@ -64,14 +70,17 @@ const WeekPickerModal = () => {
           <Button
             variant="outline"
             size="sm"
+            className="flex items-center space-x-2"
             onClick={incrementViewYear}
             disabled={isMaxYear}
           >
             Next
-            <ChevronRight className="h-4 w-4 ml-2" />
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
-        <DialogDescription className="sr-only">hello</DialogDescription>
+        <DialogDescription className="sr-only">
+          Choose a week from the calendar below
+        </DialogDescription>
         {/* Weeks Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 flex-1 overflow-y-auto">
           {weeksToShow.map((weekInfo, index) => {

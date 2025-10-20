@@ -17,6 +17,7 @@ interface WeeklyState {
   goToPreviousWeek: () => void;
   goToNextWeek: () => void;
   goToCurrentWeek: () => void;
+  setViewYear: (year: number) => void;
   incrementViewYear: () => void;
   decrementViewYear: () => void;
 }
@@ -30,14 +31,14 @@ export const useWeeklyStore = create<WeeklyState>((set, get) => ({
   setSelectedWeek: (week) => {
     // Prevent selecting future weeks
     if (!isWeekFuture(week)) {
-      set({ selectedWeek: week });
+      set({ selectedWeek: week, viewYear: week.year });
     }
   },
 
   goToPreviousWeek: () => {
     const currentWeek = get().selectedWeek;
     const prevWeek = getPreviousWeek(currentWeek);
-    set({ selectedWeek: prevWeek });
+    set({ selectedWeek: prevWeek, viewYear: prevWeek.year });
   },
 
   goToNextWeek: () => {
@@ -45,12 +46,17 @@ export const useWeeklyStore = create<WeeklyState>((set, get) => ({
     const nextWeek = getNextWeek(currentWeek);
     // Only navigate if next week is not in the future
     if (!isWeekFuture(nextWeek)) {
-      set({ selectedWeek: nextWeek });
+      set({ selectedWeek: nextWeek, viewYear: nextWeek.year });
     }
   },
 
   goToCurrentWeek: () => {
-    set({ selectedWeek: getCurrentDateInfo() });
+    const current = getCurrentDateInfo();
+    set({ selectedWeek: current, viewYear: current.year });
+  },
+
+  setViewYear: (year) => {
+    set({ viewYear: year });
   },
 
   incrementViewYear: () => {

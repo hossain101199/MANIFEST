@@ -1,7 +1,7 @@
 import { PUBLIC_ROUTES } from "@/lib/constants/routes";
 import Link from "next/link";
 import { ReactNode } from "react";
-import Container from "../common/Container";
+import Container from "../common/container";
 import { Card } from "../ui/card";
 
 interface AuthCardProps {

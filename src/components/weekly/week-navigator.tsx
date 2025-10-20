@@ -36,11 +36,11 @@ const WeekNavigator = () => {
       {/* Previous Week Button */}
       <Button
         variant="outline"
-        size="lg"
-        className="w-full sm:w-auto"
+        size="sm"
+        className="w-full sm:w-auto flex items-center space-x-2"
         onClick={goToPreviousWeek}
       >
-        <ChevronLeft className="h-5 w-5 mr-2" />
+        <ChevronLeft className="h-5 w-5" />
         Previous
       </Button>
 
@@ -88,13 +88,13 @@ const WeekNavigator = () => {
       {/* Next Week Button */}
       <Button
         variant="outline"
-        size="lg"
-        className="w-full sm:w-auto"
+        size="sm"
+        className="w-full sm:w-auto flex items-center space-x-2"
         onClick={goToNextWeek}
         disabled={!canGoNext}
       >
         Next
-        <ChevronRight className="h-5 w-5 ml-2" />
+        <ChevronRight className="h-5 w-5" />
       </Button>
     </Card>
   );

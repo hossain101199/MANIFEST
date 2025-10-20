@@ -1,4 +1,4 @@
-import Container from "@/components/common/Container";
+import Container from "@/components/common/container";
 import DashboardHeader from "@/components/layouts/dashboard-header";
 import { ReactNode } from "react";
 
